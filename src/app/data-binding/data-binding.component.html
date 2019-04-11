@@ -1,0 +1,78 @@
+<section class="container">
+  <article> 
+    <!-- <h3>Interpolation</h3>
+    <p>Acesse: <a href="{{ url }}">{{ url }}</a></p>
+    <p>xxx</p> -->
+
+    <!-- #classe variável = atribui o elemento a essa variável -->
+    <!-- <select #classe (change)="0">
+      <option value="alert-primary">primary</option>
+      <option value="alert-secondary">secondary</option>
+      <option value="alert-success">success</option>
+      <option value="alert-danger">danger</option>
+    </select> -->
+
+    <div class="container">
+
+      <!-- recebe o value da variavel classe(select) pela Interpolatiion -->
+      <!-- <div class="alert {{classe.value}}">
+        Texto
+      </div> -->
+
+      <!-- class binding: recebe o estilo definido se a condição for verdadeira no if ternario -->
+      <!-- <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+        Texto de Erro
+      </div> -->
+
+      <!-- class binding : adiciona a classe se a condição for verdadeira -->
+      <!-- <div class="alert" role="alert" [class.alert-primary]="classe.value == 'alert-primary'">
+        A simple primary alert—check it out!
+      </div>
+      <div class="alert" role="alert" [class.alert-secondary]="classe.value == 'alert-secondary'">
+        A simple secondary alert—check it out!
+      </div>
+      <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
+        A simple success alert—check it out!
+      </div>
+      <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
+        A simple danger alert—check it out!
+      </div> -->
+    </div>
+
+  </article>
+
+  <article>
+    <!-- ao clicar executa o método 'botaoClicado()' definido no arquivo .ts -->
+    <!-- <div>
+      <button class="class btn btn-primary" (click)="botaoClicado()">Clique</button>
+    </div> -->
+
+    <div>
+      <!-- <input type="text" (keyup)="onKeyUp($event)" class="form-control"> -->
+      <!-- capturar evento '$event' -->
+
+      <!-- Variavel local #campoinput: ao ser passada como parâmetro o método entende que precisa receber o value sem a necessidade de declarar o HTMLinputElement -->
+      <!-- <input type="text" class="form-control" #campoinput (keyup)="mostrar(campoinput.value)">
+      <p>{{ valor }}</p> -->
+
+    </div>
+  </article>
+
+  <!-- <article class="my-5">
+    <h3>{{ campo.value }}</h3>
+    <input type="text" class="form-control" [formControl]="campo">
+    <p>{{ campo.value }}</p>
+  </article> -->
+
+  <app-input-property [nome]="nomeCurso"></app-input-property>
+  <!-- a propriedade [nome] vem do @input definido no input-property component -->
+
+
+  
+  
+</section>
+
+<section class="container">
+  <!-- <app-contador-angular [valor]="valorInicial" (mudouValor)="onMudouValor($event)"></app-contador-angular> -->
+  <app-contador-angular></app-contador-angular>
+</section>
