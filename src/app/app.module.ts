@@ -22,6 +22,7 @@ import { FundoAmareloDirective } from './shared/fundo-amarelo.directive';
 import { DiretivasCustomizadasComponent } from './diretivas-customizadas/diretivas-customizadas.component';
 import { HighlightDirective } from './shared/highlight.directive';
 import { InputDirective } from './shared/input.directive';
+import { GitComponent } from './git/git.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { InputDirective } from './shared/input.directive';
     FundoAmareloDirective,
     DiretivasCustomizadasComponent,
     HighlightDirective,
-    InputDirective
+    InputDirective,
+    GitComponent
   ],
   imports: [
     BrowserModule,
