@@ -1,3 +1,10 @@
-<p>
-  ngclass works!
-</p>
+<h1>
+  <a (click)="onFavorito()"><i class="fa-star" [class.fas]="meuFavorito" [class.far]="!meuFavorito"></i></a>
+  <!-- on click aciona o método que faz um toggle no valor da variável booleana meuFavorito -->
+  <!-- os Data Bindings determinam qual a classe ativa de acordo com o valor de meuFavorito -->
+ </h1>
+ 
+   <h1>
+     <a (click)="onLike()"><i class="fa-heart" [ngClass]="{'fas' : meuLike, 'far': !meuLike}"></i></a>
+     <!-- a diretiva ngClass passada por meio de um data Binding faz um if else entre os valores e mostra a classe atribuída ao valor atual da variável   -->
+    </h1>

@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgclassComponent implements OnInit {
 
+  meuFavorito: boolean = false;
+  meuLike: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onFavorito(){
+    this.meuFavorito = !this.meuFavorito;
+    
+  }
+
+  onLike(){
+    this.meuLike = !this.meuLike;
   }
 
 }

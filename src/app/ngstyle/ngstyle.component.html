@@ -1,0 +1,11 @@
+<h5>Styles com property Binding</h5>
+<div>
+    <input type="number" class="d-block my-2" [(ngModel)]="tamanhoFonte">
+</div>
+<button (click)="mudarAtivo()" class="btn"
+  [ngStyle]="{
+    'background': ativo? 'white': 'black',
+    color: ativo?  'black' : 'white',
+    'fontSize': tamanhoFonte + 'px'
+  }"
+><span *ngIf="!ativo">Botão Ativo</span><span *ngIf="ativo">Botão Inativo</span></button>

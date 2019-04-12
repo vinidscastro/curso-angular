@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./diretivas-customizadas.component.scss']
 })
 export class DiretivasCustomizadasComponent implements OnInit {
+  mostrarCursos: boolean = true;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onMostrarCursos(){
+    this.mostrarCursos = !this.mostrarCursos; 
   }
 
 }

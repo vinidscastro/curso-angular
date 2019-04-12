@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,8 @@ import { DiretivasCustomizadasComponent } from './diretivas-customizadas/diretiv
 import { HighlightDirective } from './shared/highlight.directive';
 import { InputDirective } from './shared/input.directive';
 import { GitComponent } from './git/git.component';
+import { NgstyleComponent } from './ngstyle/ngstyle.component';
+import { NgElseDirective } from './shared/ng-else.directive';
 
 @NgModule({
   declarations: [
@@ -44,12 +47,15 @@ import { GitComponent } from './git/git.component';
     DiretivasCustomizadasComponent,
     HighlightDirective,
     InputDirective,
-    GitComponent
+    GitComponent,
+    NgstyleComponent,
+    NgElseDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     ListaService

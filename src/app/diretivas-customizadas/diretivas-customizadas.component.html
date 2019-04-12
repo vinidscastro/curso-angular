@@ -10,3 +10,18 @@
 </p>
 
 <p diretivaInput>Mais uma diretiva Customizada</p>
+
+<section class="container">
+  <div [hidden]="mostrarCursos">
+    Lista de Cursos
+  </div>
+  <div [hidden]="!mostrarCursos">
+    Não existem Cursos na lista
+  </div>
+  <!-- variável boolena mostrarCursos se for true exibe o objeto, se for false não exibe -->
+  
+  <button class="btn btn-success text-light" >
+      <span [hidden]="!mostrarCursos" (click)="onMostrarCursos()">Mostrar Cursos</span>
+      <span [hidden]="mostrarCursos" (click)="onMostrarCursos()">Esconder Cursos</span>
+    </button>
+    <!-- event binding click chama função onMostrarCursos que troca o valor da variável booleana mostrarCursos  --></section>
