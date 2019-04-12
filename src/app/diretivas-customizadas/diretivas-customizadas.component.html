@@ -1,21 +1,23 @@
-<p fundoAmarelo>
-  Texto Marcado
-</p>
-
-<button class="btn" fundoAmarelo>Butão</button>
-
-
-<p appHighlight>
-  Texto com Highlight quando passo o mouse
-</p>
-
-<p diretivaInput>Mais uma diretiva Customizada</p>
+<section class="container">
+  <p fundoAmarelo>
+    Texto Marcado
+  </p>
+  
+  <button class="btn" fundoAmarelo>Butão</button>
+  
+  
+  <p appHighlight>
+    Texto com Highlight quando passo o mouse
+  </p>
+  
+  <p diretivaInput>Mais uma diretiva Customizada</p>
+</section>
 
 <section class="container">
-  <div [hidden]="mostrarCursos">
+  <div *ngIf="mostrarCursos">
     Lista de Cursos
   </div>
-  <div [hidden]="!mostrarCursos">
+  <div *ngIf="!mostrarCursos">
     Não existem Cursos na lista
   </div>
   <!-- variável boolena mostrarCursos se for true exibe o objeto, se for false não exibe -->
